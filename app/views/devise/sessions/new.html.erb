@@ -2,7 +2,7 @@
         <form method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><%= image_tag('paulogo.png') %></div>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { data: { turbo: false} } ) do |f| %>
               <div class="field form-group">
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
               </div>
@@ -26,4 +26,3 @@
 
             <% end %>
     </div>
-  

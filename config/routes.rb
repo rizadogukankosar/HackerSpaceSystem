@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    post '/users/sign_up' => 'devise/registrations#create'
   end
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :users, only: [:show]
+
   root to: "pages#home"
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
