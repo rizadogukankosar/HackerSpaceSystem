@@ -29,12 +29,12 @@
 
     <div class="field form-group">
       <% if @minimum_password_length %>
-        <%= f.password_field :password, autocomplete: "new-password", placeholder:"Password (Min ".concat(@minimum_password_length.to_s)+ " Characters)", class:"form-control"%>
+        <%= f.password_field :password, autocomplete: "off", placeholder:"Password (Min ".concat(@minimum_password_length.to_s)+ " Characters)", class:"form-control"%>
       <% end %>
     </div>
 
     <div class="field form-group">
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Password Confirmation", class:"form-control" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation", class:"form-control" %>
     </div>
 
     <div class="actions form-group">
