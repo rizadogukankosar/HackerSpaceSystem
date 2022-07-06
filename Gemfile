@@ -45,6 +45,9 @@ gem 'devise'
 gem "image_processing", ">= 1.2"
 gem 'rqrcode', '~> 2.1', '>= 2.1.1'
 gem 'sass-rails'
+gem 'file_validators'
+gem 'paperclip', '~> 6.1'
+gem 'gravatar_image_tag', '~> 1.2'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

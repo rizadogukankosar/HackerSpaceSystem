@@ -1,9 +1,9 @@
 <div class="login-dark">
     <form method="post">
         <h2 class="sr-only">Login Form</h2>
-        <div class="illustration"><%= image_tag('paulogo.png') %></div>
+          <div class="illustration"><%= image_tag user_avatar(current_user), class: "rounded-circle" %></div>
         <div class="center_div">
-          <h6><%= @currentUser.name%></h6> <h6><%= @currentUser.surname%></h6>
+          <h4><%= @currentUser.name.capitalize()%></h4> <h4><%= @currentUser.surname.capitalize()%></h4>
           <div class="d-flex justify-content-center align-items-center"> <%= render_qr_code(@userQrDetails) %> </div>
           <h6>Kapıyı açmak için qr kodu okutunuz</h6>
         </div>

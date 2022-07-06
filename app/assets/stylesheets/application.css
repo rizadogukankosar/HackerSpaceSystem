@@ -14,9 +14,6 @@
  *= require_self
  */
 
- body{
-     font-family: 'Noto Sans', sans-serif;
-   }
 
  .login-dark {
    height:1000px;
@@ -98,24 +95,17 @@
   text-align: center;
 }
 
-.social-link {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  border-radius: 50%;
-  transition: all 0.3s;
-  font-size: 0.9rem;
+.profile-btn{
+  font-size: 1rem !important;
 }
 
-.social-link:hover,
-.social-link:focus {
-  background: #ddd;
-  text-decoration: none;
-  color: #555;
+#profile-card{
+  font-size: 1.30rem !important;
+  height: 100vh;
+  background: #d6d9db;
+}
+.join{
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 992px) {
