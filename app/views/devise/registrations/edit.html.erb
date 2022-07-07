@@ -1,8 +1,7 @@
 <div class="container-lg d-flex justify-content-center align-items-center row mx-auto">
 
 
-  <h2 class="col-12 text-center mt-4 font-weight-bold">Profilini Düzenle </h2>
-
+  <h2 class="col-12 text-center font-weight-bold" style="margin-top: 4rem;">Profilini Düzenle </h2>
   <div class="col-lg-6">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, data:{turbo:false}})do |f| %>
     <div style= "display: none;">
@@ -17,7 +16,12 @@
             <%= image_tag user_avatar(resource), class: "rounded-circle" %>
           </div>
           <div class="col-12 mt-3">
-            <%= f.file_field :avatar %>
+            <label class="btn btn-dark">
+                Dosya Seçin
+            <span style="display:none;">
+              <%= f.file_field :avatar%>
+            </span>
+</label>
           </div>
         </div>
       </div>
@@ -37,8 +41,8 @@
         <button class="btn btn-info col-10" id="password-switch"> Şifre </button>
         <div class="field form-group col-12 mt-2">
           <% if @minimum_password_length %>
-          <%= f.password_field :password, placeholder:"Şifrenizi Giriniz (Min ".concat(@minimum_password_length.to_s)+ " Karakter)", class:"form-control form-password", style:"display:none;"%>
-        <% end %>
+           <%= f.password_field :password, placeholder:"Şifrenizi Giriniz (Min. ".concat(@minimum_password_length.to_s)+ " Karakter)", class:"form-control form-password", style:"display:none;"%>
+         <% end %>
         </div>
 
         <div class="field form-group col-12">
@@ -93,7 +97,7 @@
 
 
 
-    <%= button_to "Hesabımı Sil", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger mt-2", id:"user-cancel-btn"%>
+     <%= button_to "Hesabımı Sil", registration_path(resource_name),  form: { data: { turbo_confirm: "Hesabınızı Silmek İstediğinize Emin Misiniz?" } }, method: :delete, class:"btn btn-danger mt-2", id:"user-cancel-btn"%>
     </div>
 
   </div>

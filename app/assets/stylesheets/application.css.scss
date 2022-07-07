@@ -25,6 +25,13 @@
 
  }
 
+
+.alert{
+  width:100%;
+  position: absolute;
+  z-index: 100;
+}
+
  .login-dark form {
    opacity: 90%;
    max-width:320px;
