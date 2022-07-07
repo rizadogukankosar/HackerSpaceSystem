@@ -7,4 +7,13 @@ module ApplicationHelper
       gravatar_image_url(user.email, size: size)
     end
   end
+
+  def flash_class_name(name)
+  case name
+  when "notice" then "success"
+  when "alert"  then "danger"
+  else name
+  end
+end
+
 end

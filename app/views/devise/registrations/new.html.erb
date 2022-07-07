@@ -1,11 +1,13 @@
 <div class="login-dark">
-  <form method="post">
-    <div class="illustration"><%= image_tag('paulogo.png') %></div>
+
 
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { data: { turbo: false} } ) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <div style= "display: none;">
+      <%= render "devise/shared/error_messages", resource: resource %>
+    </div>
 
+    <div class="illustration form-group"><%= image_tag('paulogo.png') %></div>
 
     <div class="field form-group">
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder:"Name", class:"form-control" %>
@@ -46,5 +48,5 @@
     </div>
     <% end %>
 
-  </form>
+
 </div>

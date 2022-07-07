@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "bootstrap"
-//= require toastr
+
 
 document.getElementById("email-switch")
         .addEventListener("click", function(event) {

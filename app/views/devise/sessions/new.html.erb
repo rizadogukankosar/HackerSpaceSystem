@@ -1,9 +1,12 @@
 <div class="login-dark">
-        <form method="post">
             <h2 class="sr-only">Login Form</h2>
-            <div class="illustration"><%= image_tag('paulogo.png') %></div>
             <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { data: { turbo: false} } ) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
+            <div style= "display: none;">
+              <%= render "devise/shared/error_messages", resource: resource %>
+            </div>
+
+
+              <div class="illustration form-group"><%= image_tag('paulogo.png') %></div>
               <div class="field form-group">
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
               </div>
@@ -23,7 +26,7 @@
                 <%= f.submit "Log in" ,class: "btn btn-primary btn-block "%>
               </div><a><br><div class="center_div">
                 <%= render "devise/shared/links" %>
-              </div></a></form>
+              </div></a>
 
             <% end %>
     </div>
