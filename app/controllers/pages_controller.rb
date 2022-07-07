@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     end
       @userQrDetails = current_user.id.to_s + " / "  + current_user.email.to_s
       @currentUser = current_user
+
   end
 
   def about

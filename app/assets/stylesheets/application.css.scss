@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+ @import "bootstrap";
 
 
  .login-dark {
@@ -100,6 +103,7 @@
 }
 
 #profile-card{
+  width:100%;
   font-size: 1.30rem !important;
   height: 100vh;
   background: #d6d9db;
@@ -119,6 +123,28 @@
   .login-dark {
     background: url('teknokent.jpg') no-repeat center center fixed;
     background-size:cover;
+
+    #edit-user-buttons{
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    height:150px;
+  }
+  #update-back-buttons{
+    width:100%;
+    margin-left:2rem;
+    margin-right:2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+  }
+  #user-cancel-btn{
+    width:100%;
+    margin-top:4rem;
+    margin-right:12rem;
+  }
+
+
 
   }
 }

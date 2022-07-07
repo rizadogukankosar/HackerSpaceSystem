@@ -5,7 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
    has_one_attached :avatar
-        
+
+   validates :name, :surname , presence:  true, length: {in: 2..25 , too_long: "%{count} characters is the maximum allowed" }
+   validates :phone , presence: true, length: { is: 10 }, uniqueness: true
+   validates :schoolNumber , uniqueness: true , length:  {maximum: 8}
+
+
 
 
 end
