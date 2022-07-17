@@ -6,7 +6,7 @@
             </div>
 
 
-              <div class="illustration form-group"><%= image_tag('paulogo.png') %></div>
+              <div class="illustration form-group"><%= image_tag "https://seeklogo.com/images/P/pamukkale-universitesi-logo-7389B23A32-seeklogo.com.png" %></div>
               <div class="field form-group">
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
               </div>
@@ -18,12 +18,12 @@
               <% if devise_mapping.rememberable? %>
                 <div class="field">
                   <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
+                  <%= f.label :remember_me, "Beni Hatırla" %>
                 </div>
               <% end %>
 
               <div class="actions form-group">
-                <%= f.submit "Log in" ,class: "btn btn-primary btn-block "%>
+                <%= f.submit "Giriş Yap" ,class: "btn btn-primary btn-block "%>
               </div><a><br><div class="center_div">
                 <%= render "devise/shared/links" %>
               </div></a>
