@@ -1,12 +1,16 @@
 class PagesController < ApplicationController
-  before_action:require_user, only: [:home]
+  before_action :require_user, only: [:home]
 
   def home
     unless user_signed_in?
       redirect_to new_user_session_path
     end
-      @userQrDetails = current_user.id.to_s + " / "  + current_user.email.to_s
-      @currentUser = current_user
+     key = SecureRandom.random_bytes(32)
+     crypt = ActiveSupport::MessageEncryptor.new(key)
+     encrypted_data = crypt.encrypt_and_sign(current_user.email.to_s)
+     @userQrDetails = encrypted_data
+     @currentUser = current_user
+     #decrypted_back = crypt.decrypt_and_verify(encrypted_data)
   end
 
   def about
